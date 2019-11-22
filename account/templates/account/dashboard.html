@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title%}Dashboard{% endblock %}
+{% block content %}
+<h1>Dashboard</h1>
+<p>Welcome to your dashboard. You can <a href="{% url 'edit' %}">edit your profile</a> or 
+    <a href="{% url 'password_change' %}">change your password</a></p>
+
+    <div class="row mt-5">
+        <div class="col-md-6" id="contain">
+            <h4 id="heading">CCTV CAMERA IMAGE</h4>
+            <div id="ImageSection">
+
+            </div>
+            <caption>load Image</caption>
+            <input type="file" name="loadImage" id="" placeholder="Load images" class="btn">
+            <hr>
+            <h5 id="heading">Attendance Information</h5>
+            <caption>Date: </caption><input type="text" name="" id="" class="ml-5"><br>
+            <caption>Semester: </caption><input type="text" class="ml-4"><br>
+            <caption>Subject_ID </caption><input type="text" name="" id="" class="ml-4"><br>
+            <button class="btn btn-primary " id="button1">Enter</button>
+
+        </div>
+        <div class="col-md-6" id="contain2">
+            <h4 id="heading">FACE DETECTION</h4>
+            <div id="ImageSection">
+
+            </div>
+
+
+            <button class="btn mt-1" id="butt">Crop Faces</button> <button class="btn mt-1">Crop Entire
+                Face</button>
+            <hr>
+            <h5 id="heading">Faces Recognition</h5><br>
+            <button class="btn btn-primary " id="button1">Start Recognition</button>
+        </div>
+    </div>
+    <div id="last_container">
+        <div class="row mt-5" id="contain">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <h5 id="heading1" class="mb-5">Attendance Result</h5>
+                <br>
+
+
+                <div class="buttonss">
+                    <button class="btn btn-primary">std Name</button>
+                    <button class="btn btn-primary">Subject</button>
+                    <button class="btn btn-primary">Semester</button>
+                    <button class="btn btn-primary">Date</button>
+                    <button class="btn btn-primary">Status</button>
+                </div>
+
+                <div id="ImageSection">
+
+                </div>
+
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+
+
+{% endblock%}
